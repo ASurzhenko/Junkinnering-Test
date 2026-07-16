@@ -219,18 +219,20 @@ namespace Junkinnering
                 _flashRoutine = null;
             }
 
+            // Destroy the spawned instance BEFORE releasing the Addressables handles that back its
+            // textures, so a released texture can never be unloaded while the renderer still exists.
+            if (_spawnedInstance != null)
+            {
+                Destroy(_spawnedInstance);
+                _spawnedInstance = null;
+            }
+
             if (_currentImageHandle.IsValid())
             {
                 _roundLoader.Release(_currentImageHandle);
                 _currentImageHandle = default;
             }
             _roundLoader?.ReleaseAll();
-
-            if (_spawnedInstance != null)
-            {
-                Destroy(_spawnedInstance);
-                _spawnedInstance = null;
-            }
 
             _service?.ReleaseAll();
         }

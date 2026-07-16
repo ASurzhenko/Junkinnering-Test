@@ -80,7 +80,7 @@ MonoBehaviour:
       - m_Id: bd05392eb395f2c4fb310093b7abc786
         m_Value: 'ServerData/[BuildTarget]'
       - m_Id: de8f45f18951ebc47a3913a00c289151
-        m_Value: <undefined>
+        m_Value: https://d2eupgfrfppc7x.cloudfront.net/junkinnering/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 55bebbcf38d4ead45a773f7dbc0aad8e
       m_Name: BuildTarget
