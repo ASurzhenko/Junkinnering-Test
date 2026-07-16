@@ -15,39 +15,15 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 621a53f7e8836054da5bf843d5583908
   m_SerializeEntries:
-  - m_GUID: 184e721d9cea8724e930a7e02d4bd850
-    m_Address: img_3
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - round_image
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3abf6495017a2f54c864fe92a937d521
-    m_Address: img_0
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - round_image
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 56e6c87f3038340498f5cc1c4e756550
     m_Address: TargetObject
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 71122181e89c9404a8215c40fe86ac72
-    m_Address: img_2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - round_image
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae5323c6a3f7b1a40b75b6b884b50888
     m_Address: FallbackTexture
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c8c9ae09d86fb384093927b8eb8760b9
-    m_Address: img_1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - round_image
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 931fa9706be4c71409fecc64449f52e7, type: 2}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Remote Images
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Remote Images
+  m_GUID: 2cb1b5f3921b3c546831c36c1d8a6c8f
+  m_SerializeEntries:
+  - m_GUID: 184e721d9cea8724e930a7e02d4bd850
+    m_Address: img_3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - round_image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3abf6495017a2f54c864fe92a937d521
+    m_Address: img_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - round_image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71122181e89c9404a8215c40fe86ac72
+    m_Address: img_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - round_image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8c9ae09d86fb384093927b8eb8760b9
+    m_Address: img_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - round_image
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 931fa9706be4c71409fecc64449f52e7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 300336f336d7b8a4799ba4ffe869bc3e, type: 2}
+    - {fileID: 11400000, guid: 036c22aba0802ed4fb63531c4b18c482, type: 2}
