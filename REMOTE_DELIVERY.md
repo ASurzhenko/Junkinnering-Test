@@ -15,7 +15,8 @@ build/upload change with ZERO runtime code change**. `RoundImageLoader` / `GameC
 - **Delivery:** CloudFront distribution `d2eupgfrfppc7x.cloudfront.net` with OAC serves the private bucket
   over HTTPS. This is the only delivery path. If CloudFront cannot serve `junkinnering/*`, fix CloudFront
   (add a behavior / OAC grant) — never open S3.
-- **Isolation:** upload only under `s3://epochreels-ota/junkinnering/`. Do not touch EpochReels OTA keys.
+- **Isolation:** the bucket is shared with another personal project, so uploads go only under the
+  `junkinnering/` prefix and never touch keys outside it.
 
 ## Prerequisites
 

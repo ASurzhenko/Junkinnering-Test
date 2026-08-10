@@ -148,6 +148,12 @@ same data, through the same sprite source.
 Switching back returns the counter to the pool bound rather than to something higher, which is the part worth
 checking: it proves the strawman path releases everything it took.
 
+**Reproducing the counts in the Editor needs `Application.runInBackground`.** The project ships with it off,
+so an unfocused Editor stops ticking, `await` continuations never resume, and every handle taken so far still
+reads as live — a convincing false leak the moment you alt-tab away to read these instructions. Either keep
+the Game view focused while reading the numbers, or tick **Player Settings ▸ Resolution and Presentation ▸ Run
+In Background**. On device this cannot happen: the app is foreground while you are looking at it.
+
 **What the toggle does NOT show: texture memory.** The 150 entries share 30 addresses and Addressables
 refcounts per key, so both modes resolve to roughly the same set of distinct textures. Memory is the separate
 claim of the two-size tier (128² grid icons vs 512² equipped art), and conflating the two would produce an
@@ -187,15 +193,24 @@ Both remote groups are live: the tap game's round images in **`Remote Images`**,
 in **`Remote Parts`**. Everything else — the prefab, the fallback texture, the placeholder, the UI kit — stays
 local, so the app always starts even with no network.
 
+**The catalog itself is embedded in the player; only bundles travel over the network.** `Build Remote Catalog`
+is deliberately **off**. With it on, the player compares its built-in catalog hash against one fetched from
+the CDN at startup and, on any difference, uses the remote catalog *instead* — which is how content updates
+without a rebuild are meant to work, and also how a catalog left over from an earlier upload silently
+supersedes the correct one shipped inside the APK. Every key added since that upload then throws
+`InvalidKeyException`, raised from `InitializationOperation.LoadContentCatalogInternal`. The failure is
+inverted from every expectation: the app works offline and breaks online. There is no content-update story in
+this project, so the coupling buys nothing and is switched off; remote *bundle* loading is unaffected, because
+those locations live in the embedded catalog.
+
 Two properties make the offline path honest rather than a hang:
 
 - **`Remote Parts` carries `Timeout = 8`, `Retry = 1`.** The default of `0/0` means a stalled request never
   completes *and* never fails; with a bound, an unreachable host becomes a failed load, which the code already
   has a branch for — placeholder art plus a named reason in the overlay.
-- **`Catalog Requests Timeout = 8`.** The group timeout covers remote *bundles* only. With **Build Remote
-  Catalog** enabled the player also fetches a catalog hash at startup, and that request has its own timeout;
-  left at `0` an unreachable CDN would park initialization forever. Bounded, the fetch gives up and the player
-  falls back to the catalog embedded in the APK.
+- **`Catalog Requests Timeout = 8`.** Not load-bearing today, since no catalog is fetched remotely — it is set
+  so that turning `Build Remote Catalog` back on cannot reintroduce an unbounded startup request. The group
+  timeout above covers remote *bundles* only.
 
 To publish content:
 
