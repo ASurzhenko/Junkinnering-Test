@@ -15,10 +15,10 @@ MonoBehaviour:
   m_DefaultGroup: 621a53f7e8836054da5bf843d5583908
   m_currentHash:
     serializedVersion: 2
-    Hash: 02888531e0e1c5b69c0a6cfa8050443e
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 1
-  m_CatalogRequestsTimeout: 0
+  m_BuildRemoteCatalog: 0
+  m_CatalogRequestsTimeout: 8
   m_DisableCatalogUpdateOnStart: 0
   m_InternalIdNamingMode: 0
   m_InternalBundleIdMode: 1
@@ -54,12 +54,13 @@ MonoBehaviour:
     m_Id: bd05392eb395f2c4fb310093b7abc786
   m_RemoteCatalogLoadPath:
     m_Id: de8f45f18951ebc47a3913a00c289151
-  m_ContentStateBuildPathProfileVariableName: 
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
+  - {fileID: 11400000, guid: e9a52c3e0455e224a8cd56334bbc6b7c, type: 2}
   - {fileID: 11400000, guid: 40ba09e02dd2b9942bf9c0ffa0a98013, type: 2}
   - {fileID: 11400000, guid: fef744331c368f94b96d344eb1edfb5d, type: 2}
   m_BuildSettings:
@@ -80,7 +81,7 @@ MonoBehaviour:
       - m_Id: bd05392eb395f2c4fb310093b7abc786
         m_Value: 'ServerData/[BuildTarget]'
       - m_Id: de8f45f18951ebc47a3913a00c289151
-        m_Value: https://d2eupgfrfppc7x.cloudfront.net/junkinnering/[BuildTarget]
+        m_Value: 'https://d2eupgfrfppc7x.cloudfront.net/junkinnering/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: 55bebbcf38d4ead45a773f7dbc0aad8e
       m_Name: BuildTarget

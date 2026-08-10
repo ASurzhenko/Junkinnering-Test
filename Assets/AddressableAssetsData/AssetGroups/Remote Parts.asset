@@ -1,0 +1,323 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Remote Parts
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Remote Parts
+  m_GUID: 1482f3f2ba5607c4c815dccff3f912a3
+  m_SerializeEntries:
+  - m_GUID: 0340f941a60bedb4c92de1ddb191dfee
+    m_Address: weapon_extinguisher.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05e7ee766644c7549a602635c7e5845e
+    m_Address: torso_cooler.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f6beeddb747b984fbd8064fb90da030
+    m_Address: weapon_blower.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1eaac1afc878c2247804141a55f25576
+    m_Address: legs_bird.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20e7b10898e9eae4b935b4f87871b046
+    m_Address: legs_bird.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 213a565467f599145976a4389fee4b37
+    m_Address: weapon_bat.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 214f54167b63df34c8a2e1b26dc000b2
+    m_Address: arms_wrench.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2164e1cb208badd44ab216d2607102eb
+    m_Address: head_helmet.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 219f442f5dcb5144886c88adcbaca0dc
+    m_Address: legs_spring.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 255b8f8cc8c45af4d8adbc0ea7f1e493
+    m_Address: arms_piston.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27af816b6a877ca4fb2666410f6a1438
+    m_Address: weapon_sledge.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b06692b00eb8304fa4fdfc8ceb15d58
+    m_Address: weapon_sledge.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33cc180a3ce2c33429a22cd40efb4f6c
+    m_Address: legs_spring.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 377c7c7cb78255f4cb212b2be22cf348
+    m_Address: torso_cylinder.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3815c40593e1168498000ca03294665d
+    m_Address: arms_drill.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3af202cbbb8ab1e4881d42f55eb80fa3
+    m_Address: weapon_extinguisher.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44ea9dbe609fd2c49a217c4892b883e2
+    m_Address: arms_claw.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46affbd52f801c746b09c2fef756ef6a
+    m_Address: legs_tracks.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f8d42516a50d2b4aaca0eda644edeec
+    m_Address: legs_trolley.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5166d181aeaa7a146ac22efcf3db36c0
+    m_Address: legs_tracks.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53573424ccbfaab4ea40f67047b9db7d
+    m_Address: head_crt.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63f58a2ba92a7504f8480c236913c0e7
+    m_Address: arms_plate.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65f7ce314d871204a893e4aa7d31daa2
+    m_Address: head_paintcan.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67a60e896fc443e4db340e7d9578bb2a
+    m_Address: arms_drill.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7172798c94d4b654a88592e154f570fb
+    m_Address: arms_piston.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73f747db391170e41a14755fd672d380
+    m_Address: legs_pipe.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78216491575f56744858f29a6dc9bc57
+    m_Address: weapon_blower.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d4c53de0afce3240bbf0845d3285d8a
+    m_Address: weapon_chainsaw.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82313f38f59440e47a624020444a61b3
+    m_Address: torso_microwave.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ba4a4e53d47e034fad64af94f97ed67
+    m_Address: weapon_chainsaw.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 935f43bc4cefb5b4ab2ff5b922721f3a
+    m_Address: legs_pipe.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e3d1a1c20197764b834debc609ba158
+    m_Address: arms_teddy.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f4b09154593a96488f2ca8dcf5c3fc4
+    m_Address: weapon_harpoon.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1317f757c8582f4684592e897a6eef7
+    m_Address: torso_arcade.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1865f9ea7cb9d840b82ca8fb0e13cd2
+    m_Address: head_crt.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aaa24dfa81f413d418d7efcd96820728
+    m_Address: torso_cooler.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac9e9787b15657a42a222846d2493490
+    m_Address: torso_vending.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae041231ec2e03642b8e05967bc3b270
+    m_Address: head_teddy.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b477fab63d4395e43ac08f4bba6f3918
+    m_Address: torso_drum.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6fa4c47af098ed4891875a366840a5b
+    m_Address: torso_microwave.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b77e363fce6e2534baa6019942385356
+    m_Address: head_trafficlight.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdddfdebf2979f141ad3317f3a7d85a1
+    m_Address: weapon_bat.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7b12653fc0d2ef45bb6e73cd187330a
+    m_Address: arms_teddy.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c879a815b908c2e4c8e93ae202c489e9
+    m_Address: torso_vending.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca5dfe2cd499f4844aebb9ee2e0d1613
+    m_Address: weapon_harpoon.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d29e9ee27a0fb4c4394603ac580a9658
+    m_Address: head_helmet.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4b6ad4faddde574c88dc6bd92706a48
+    m_Address: torso_cylinder.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8d7a315d9b239348a4075b6d473f245
+    m_Address: head_kettle.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dcb98eb832ab5c345acabc8599b0a0ac
+    m_Address: arms_claw.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e049373beed2b2c42af96815c48eca53
+    m_Address: torso_drum.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e58b80f75190cea4fac37ae5027f2684
+    m_Address: head_paintcan.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6d67ab05362e99488ff4da715a03d94
+    m_Address: legs_boots.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6ee63e8e31386a4ca00a781e3c9a0c8
+    m_Address: head_teddy.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e898d869f894f9846a7dd21eb5ddfe70
+    m_Address: head_trafficlight.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eae7e91790490c340b329d06f187cdb4
+    m_Address: legs_trolley.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eef16840fff40214f9d5872e122e3fcf
+    m_Address: arms_wrench.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef3d0a30c07fd9e4eb9498c68182541a
+    m_Address: torso_arcade.full
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f68113f82146f5b499186054d93ef90a
+    m_Address: arms_plate.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f729c43727d256c4fbb87cb6eb67fff3
+    m_Address: head_kettle.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcabc11a8b0ff374489a9b5f6705a77b
+    m_Address: legs_boots.icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 931fa9706be4c71409fecc64449f52e7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 572107b8c1d7cf843ab7ddc8d235120f, type: 2}
+    - {fileID: 11400000, guid: 4eb9036d1ed6b39428b38eb84442f113, type: 2}

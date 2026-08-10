@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.EventSystems;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Junkinnering
@@ -25,6 +27,7 @@ namespace Junkinnering
         private const string InitialScore = "0";
 
         private static readonly Color FlashColor = Color.red;
+        private static readonly List<RaycastResult> _uiRaycastResults = new List<RaycastResult>();
 
         [SerializeField] private AssetReferenceGameObject _prefabRef;
         [SerializeField] private AssetReference _fallbackTextureRef;
@@ -168,6 +171,13 @@ namespace Junkinnering
                 return;
             }
 
+            // A tap that lands on UI belongs to the UI, not to the game: without this it also raycasts
+            // into the scene, misses the object and registers as an incorrect tap.
+            if (IsPointerOverUi(screenPos))
+            {
+                return;
+            }
+
             Ray ray = _camera.ScreenPointToRay(screenPos);
             bool isHit = Physics.Raycast(ray, out RaycastHit hit)
                          && hit.collider.transform.IsChildOf(_spawnedInstance.transform);
@@ -180,6 +190,26 @@ namespace Junkinnering
             {
                 OnIncorrectTap();
             }
+        }
+
+        /// <summary>
+        /// Whether any raycastable UI sits under the tap. Uses the tap's own screen position rather
+        /// than EventSystem.IsPointerOverGameObject(), whose no-argument form answers for the mouse
+        /// pointer id and does not cover touch. Covers every UI element in the scene, not just buttons.
+        /// </summary>
+        private static bool IsPointerOverUi(Vector2 screenPos)
+        {
+            EventSystem eventSystem = EventSystem.current;
+            if (eventSystem == null)
+            {
+                // No EventSystem means no UI can be hit, so every tap is a game tap.
+                return false;
+            }
+
+            PointerEventData pointerData = new PointerEventData(eventSystem) { position = screenPos };
+            _uiRaycastResults.Clear();
+            eventSystem.RaycastAll(pointerData, _uiRaycastResults);
+            return _uiRaycastResults.Count > 0;
         }
 
         private void OnCorrectTap()
