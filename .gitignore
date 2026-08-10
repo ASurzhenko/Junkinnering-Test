@@ -112,3 +112,6 @@ InitTestScene*.unity*
 # Local interview-prep notes, not part of the deliverable
 /DEFENSE_NOTES.md
 /DEFENSE_NOTES_RU.md
+
+# Unity crash-recovery scratch folder
+/[Aa]ssets/_Recovery*
