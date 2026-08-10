@@ -27,6 +27,10 @@ namespace Junkinnering.Editor
         private const string S3Target = "s3://epochreels-ota/junkinnering/Android/";
         private const string Region = "us-east-1";
 
+        // The CLI's default profile does not carry credentials that can write to this bucket, so the
+        // sync must name the profile explicitly — without it the upload fails with InvalidAccessKeyId.
+        private const string AwsProfile = "epochreels";
+
         [MenuItem("Tools/Addressables/Build & Upload Remote")]
         public static void BuildAndUpload()
         {
@@ -54,7 +58,7 @@ namespace Junkinnering.Editor
             var startInfo = new ProcessStartInfo
             {
                 FileName = "aws",
-                Arguments = $"s3 sync \"{source}\" {target} --region {Region}",
+                Arguments = $"s3 sync \"{source}\" {target} --region {Region} --profile {AwsProfile}",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,

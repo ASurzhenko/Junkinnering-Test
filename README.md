@@ -5,6 +5,17 @@ image loaded **asynchronously via Addressables**. Tap it → score goes up and a
 round). Tap empty space → the object flashes red and keeps its image. If a new round starts before the
 previous image finished downloading, the stale download is cancelled so it can never overwrite the newer one.
 
+The repository also contains **Junkbot Workshop**, an extension built after the graded task: a modular robot
+assembly screen driven by the same Addressables discipline at a much larger scale — see
+[Junkbot Workshop](#junkbot-workshop-extension) below. The workshop is the **startup scene**, and the two
+scenes reach each other: `TAP GAME` in the workshop, `WORKSHOP` in the tap game.
+
+Adding that button surfaced a gap in the original tap handling: `GameController` raycast every tap into the
+scene unconditionally, so a tap that landed on UI also missed the object and registered as an incorrect tap.
+The fix is a pointer-over-UI check ahead of the raycast, using the tap's own screen position (rather than
+`EventSystem.IsPointerOverGameObject()`, whose no-argument form answers for the mouse pointer id and does not
+cover touch). It covers every raycastable UI element in the scene, not only the button.
+
 ## Stack
 
 - **Unity `6000.3.5f2`**, **URP 17.3.0**, Android target (runs in the Editor with mouse).
@@ -15,11 +26,17 @@ previous image finished downloading, the stale download is cancelled so it can n
 ## Run it
 
 1. Open the project in Unity `6000.3.5f2`.
-2. Open `Assets/Scenes/SampleScene.unity`.
+2. Open `Assets/Scenes/TapGameScene.unity` (the graded task). `Assets/Scenes/WorkshopScene.unity` is the
+   startup scene of the extension and can be played the same way.
 3. **Addressables ▸ Groups ▸ Play Mode Script = "Use Asset Database (fastest)"** (default local mode — no
    content build needed).
 4. Press **Play**. Status shows `Loading…` → `Tap the object!`; the sphere appears with an image, score `0`.
 5. **Click the sphere** → score increments, a new image loads. **Click empty space** → the object flashes red.
+
+> **Keep the Game view focused, or tick Edit ▸ Preferences ▸ General ▸ *Run In Background*.** An unfocused
+> Editor stops ticking the player loop, so `await` continuations never resume: loads stay in flight and the
+> workshop's live-handle counter reads like a leak that is really just a paused game. Alt-tabbing away to read
+> these instructions is enough to trigger it.
 
 Local mode works out of the box. Remote delivery (the spec's optional point 3) is configured and documented
 under [Remote delivery](#remote-delivery-optional) below.
@@ -80,21 +97,120 @@ Deliberately small — a handful of focused classes, namespace `Junkinnering`, n
 | g | Hit → new image + round; miss → negative flash, image unchanged | `GameController.Update` → `OnCorrectTap` / `OnIncorrectTap` |
 | h | New round cancels the previous unfinished download | per-round `CancellationTokenSource`, captured-local-token check |
 
-## Remote delivery (optional)
+## Junkbot Workshop (extension)
 
-The round images live in an Addressables **`Remote Images`** group; the prefab + fallback stay local (so the
-app always starts, including offline — an unreachable remote simply falls back to the fallback texture). The
-profile's `RemoteLoadPath` points at an HTTPS CloudFront host, and **Build Remote Catalog** is enabled with
-its Build/Load paths set to the Remote profile variables, so the catalog is self-hosted alongside the bundles.
+Built after the graded task was accepted, to exercise what a content-heavy live game actually needs: a large
+part inventory whose art is streamed in a **bounded window**, recycling as a cancellation trigger, and
+concurrent operations that must supersede within a scope while staying independent across scopes.
 
-To publish the remote content:
+- **150 catalog entries** (6 base parts × 5 rarity tiers × 5 slots) over 30 sprites, so the grid genuinely
+  recycles on real data.
+- **Two Addressable entries per part** — `<partId>.icon` (128²) for the grid, `<partId>.full` (512²) for the
+  equipped robot: a 16× pixel ratio between what a cell costs and what the rig costs.
+- **The grid loads only the visible window and releases on recycle**, so live handles are bounded by the cell
+  pool rather than by catalog size. A dev overlay prints the live handle count against the pool, plus texture
+  and total allocated memory.
+- **Per-cell and per-slot generation tokens.** A rebound cell discards its stale icon; equipping a head and a
+  torso in the same frame supersedes *within* each slot and never across them.
 
-1. Confirm the host serves the target prefix over HTTPS (`curl -I` a probe object → `200`) **before** building
-   — the load path is baked into the catalog at build time.
-2. Set the active build target to **Android**, then **Addressables ▸ Groups ▸ Build ▸ New Build ▸ Default
-   Build Script**. The remote bundles + `catalog_*.bin` + `catalog_*.hash` land in `ServerData/Android/`.
-3. Upload them to the host: `aws s3 sync ServerData/Android/ s3://<bucket>/<prefix>/Android/`.
-4. Verify each artifact resolves over HTTPS (`curl -I … → 200`), then run on an Android device (network trace
-   shows the `.hash` + bundle requests) and check the offline path shows the fallback texture.
+| Script | Role |
+|--------|------|
+| `PartCatalog` / `PartDefinition` / `PartStats` | Data. The catalog holds **address strings**, never Sprite references — a direct reference would make every texture a build dependency of the catalog's bundle. |
+| `RobotLoadout` | Pure model: slot → part, aggregation, and a throw when a part is equipped into the wrong slot. |
+| `GridWindow` | Pure static window math (`firstIndex`/`lastIndex`, content height). Unit-tested directly. |
+| `ISpriteSource` / `AddressableSpriteSource` | The one abstraction, and it exists for testability. Never throws: a failure or a cancellation returns a lease with no sprite, and every exit routes through one decrement so the live count cannot drift. |
+| `PartCardView` | One pooled grid cell. Releases its stored lease *before* starting the next load, so the stored lease is bounded at one per cell. |
+| `PartPickerView` | Virtualized grid: a fixed pool positioned by index over a scroll content sized from the item count. The content carries **no layout group** — one would re-lay the pool every frame and defeat virtualization. |
+| `WorkshopController` | Owns the loadout, the equip path and the picker; the only Unity lifecycle owner on the screen. |
+| `DiagnosticsOverlay` | The live readout. **Dev-gated by design**: it deletes itself when `!UNITY_EDITOR && !DEVELOPMENT_BUILD`, so a release build ships without it — which is why the demo APK is a Development Build. |
+| `SafeAreaFitter` | Insets interactive UI to `Screen.safeArea`; only the full-bleed background sits outside it. |
 
-Switch the Play Mode Script back to **"Use Asset Database (fastest)"** for local iteration at any time.
+### The naive/windowed toggle
+
+The bounded-window claim is invisible by construction — a working screen looks the same either way — so the
+overlay carries a **MODE** button that rebuilds the open picker with the default implementation anyone would
+write first: **one cell per item, each loading its own icon, nothing released until close.** It is labelled
+in the UI as exactly that, so the comparison reads as honest rather than rigged, and it routes through the
+same `ISpriteSource`, so the live handle counts are directly comparable.
+
+Measured in the Editor on one slot's 30 entries (Play Mode Script = Use Asset Database):
+
+| | Cells instantiated | Live handles | Picker open cost |
+|---|---|---|---|
+| Windowed | 15 (the pool) | 9 grid handles | ~3–5 ms |
+| Naive | 30 (one per item) | 30 | ~21 ms |
+
+A second dev button, **LIST ×1 / ×5**, multiplies the open list so the comparison can be seen at demo scale
+without a second build. At ×5 (150 entries in one picker) the toggle reads **150 cells / 155 live handles /
+~80 ms to open** against the pool's unchanged **15 / 14 / ~2 ms** — a ~35× difference in open cost, from the
+same data, through the same sprite source.
+
+Switching back returns the counter to the pool bound rather than to something higher, which is the part worth
+checking: it proves the strawman path releases everything it took.
+
+**What the toggle does NOT show: texture memory.** The 150 entries share 30 addresses and Addressables
+refcounts per key, so both modes resolve to roughly the same set of distinct textures. Memory is the separate
+claim of the two-size tier (128² grid icons vs 512² equipped art), and conflating the two would produce an
+impressive number that means nothing.
+
+The toggle compiles out of a release build along with the overlay.
+
+The UI is authored resolution-independent: reference resolution 1280×720, **height-matched** scaling, side
+panels anchored to their own screen edges and the robot centre-anchored at a fixed size, so extra width on a
+tall phone becomes slack in the middle instead of clipping the layout. Landscape is locked.
+
+Tests live in `Assets/Tests/EditMode` (assembly `Junkinnering.Tests`). Running them at all required moving the
+game code into an assembly definition first — a test assembly cannot reference the predefined
+`Assembly-CSharp`, which is why the original submission had none.
+
+## The Android build
+
+The APK is a **Development Build** on purpose. The diagnostics overlay and its two dev buttons strip
+themselves on `!UNITY_EDITOR && !DEVELOPMENT_BUILD`, which is right for a shipping build and wrong for a
+build whose point is to show those numbers. A release build of the same commit simply has no overlay.
+
+Requirements for the device: **ARM64, Android 7.1 (API 25) or newer, landscape**. The player is built
+`arm64-v8a` only — it does not install on an x86_64 emulator or on 32-bit-only hardware.
+
+What to try on device:
+
+1. The robot composes from five parts and the stats panel matches the aggregate.
+2. Tap a slot on the left → the picker lists that slot's 30 tiered entries.
+3. **LIST ×1 / ×5** grows the open list; **MODE: WINDOWED / NAIVE** swaps the fill strategy. Compare the
+   overlay's cell count, live handle count and open cost between the two modes — that contrast is the whole
+   point of the screen.
+4. `TAP GAME` / `WORKSHOP` move between the two scenes.
+
+## Remote delivery
+
+Both remote groups are live: the tap game's round images in **`Remote Images`**, and the workshop's part art
+in **`Remote Parts`**. Everything else — the prefab, the fallback texture, the placeholder, the UI kit — stays
+local, so the app always starts even with no network.
+
+Two properties make the offline path honest rather than a hang:
+
+- **`Remote Parts` carries `Timeout = 8`, `Retry = 1`.** The default of `0/0` means a stalled request never
+  completes *and* never fails; with a bound, an unreachable host becomes a failed load, which the code already
+  has a branch for — placeholder art plus a named reason in the overlay.
+- **`Catalog Requests Timeout = 8`.** The group timeout covers remote *bundles* only. With **Build Remote
+  Catalog** enabled the player also fetches a catalog hash at startup, and that request has its own timeout;
+  left at `0` an unreachable CDN would park initialization forever. Bounded, the fetch gives up and the player
+  falls back to the catalog embedded in the APK.
+
+To publish content:
+
+1. Confirm the host serves the target prefix over HTTPS (`curl -I` → `200`) **before** building — the load
+   path is baked into the catalog at build time.
+2. Set the active build target to **Android**, then **Tools ▸ Addressables ▸ Build & Upload Remote** (or
+   **Addressables ▸ Groups ▸ Build ▸ New Build ▸ Default Build Script** followed by
+   `aws s3 sync ServerData/Android/ s3://<bucket>/<prefix>/Android/`).
+3. Verify every artifact — `catalog_<version>.bin`, `catalog_<version>.hash` and each `*.bundle` — resolves
+   over HTTPS and that `content-length` matches the local file.
+4. Only then build the player.
+
+**Content and player travel together.** Bundle filenames carry a content hash, so rebuilding content changes
+the names; a player built before that upload asks for files that no longer exist. Rebuild the content, upload,
+verify, then build the APK — in that order.
+
+Switch the Play Mode Script to **"Use Asset Database (fastest)"** for local iteration at any time; it resolves
+every address locally and issues no web request.

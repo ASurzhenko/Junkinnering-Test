@@ -1,0 +1,1665 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcf953c2ed64ee4498ab6bc345b9371, type: 3}
+  m_Name: PartCatalog
+  m_EditorClassIdentifier: Junkinnering::Junkinnering.Workshop.PartCatalog
+  _parts:
+  - _id: head_crt_t1
+    _displayName: Common CRT Head
+    _slot: 0
+    _rarity: 1
+    _stats:
+      _attack: 3
+      _health: 25
+      _speed: 7
+      _defense: 4
+    _iconAddress: head_crt.icon
+    _fullAddress: head_crt.full
+  - _id: head_crt_t2
+    _displayName: Uncommon CRT Head
+    _slot: 0
+    _rarity: 2
+    _stats:
+      _attack: 4
+      _health: 34
+      _speed: 9
+      _defense: 5
+    _iconAddress: head_crt.icon
+    _fullAddress: head_crt.full
+  - _id: head_crt_t3
+    _displayName: Rare CRT Head
+    _slot: 0
+    _rarity: 3
+    _stats:
+      _attack: 5
+      _health: 45
+      _speed: 13
+      _defense: 7
+    _iconAddress: head_crt.icon
+    _fullAddress: head_crt.full
+  - _id: head_crt_t4
+    _displayName: Epic CRT Head
+    _slot: 0
+    _rarity: 4
+    _stats:
+      _attack: 7
+      _health: 60
+      _speed: 17
+      _defense: 10
+    _iconAddress: head_crt.icon
+    _fullAddress: head_crt.full
+  - _id: head_crt_t5
+    _displayName: Legendary CRT Head
+    _slot: 0
+    _rarity: 5
+    _stats:
+      _attack: 10
+      _health: 80
+      _speed: 22
+      _defense: 13
+    _iconAddress: head_crt.icon
+    _fullAddress: head_crt.full
+  - _id: head_helmet_t1
+    _displayName: Common Helmet Head
+    _slot: 0
+    _rarity: 1
+    _stats:
+      _attack: 4
+      _health: 28
+      _speed: 6
+      _defense: 5
+    _iconAddress: head_helmet.icon
+    _fullAddress: head_helmet.full
+  - _id: head_helmet_t2
+    _displayName: Uncommon Helmet Head
+    _slot: 0
+    _rarity: 2
+    _stats:
+      _attack: 5
+      _health: 38
+      _speed: 8
+      _defense: 7
+    _iconAddress: head_helmet.icon
+    _fullAddress: head_helmet.full
+  - _id: head_helmet_t3
+    _displayName: Rare Helmet Head
+    _slot: 0
+    _rarity: 3
+    _stats:
+      _attack: 7
+      _health: 50
+      _speed: 11
+      _defense: 9
+    _iconAddress: head_helmet.icon
+    _fullAddress: head_helmet.full
+  - _id: head_helmet_t4
+    _displayName: Epic Helmet Head
+    _slot: 0
+    _rarity: 4
+    _stats:
+      _attack: 10
+      _health: 67
+      _speed: 14
+      _defense: 12
+    _iconAddress: head_helmet.icon
+    _fullAddress: head_helmet.full
+  - _id: head_helmet_t5
+    _displayName: Legendary Helmet Head
+    _slot: 0
+    _rarity: 5
+    _stats:
+      _attack: 13
+      _health: 90
+      _speed: 19
+      _defense: 16
+    _iconAddress: head_helmet.icon
+    _fullAddress: head_helmet.full
+  - _id: head_kettle_t1
+    _displayName: Common Kettle Head
+    _slot: 0
+    _rarity: 1
+    _stats:
+      _attack: 5
+      _health: 31
+      _speed: 5
+      _defense: 6
+    _iconAddress: head_kettle.icon
+    _fullAddress: head_kettle.full
+  - _id: head_kettle_t2
+    _displayName: Uncommon Kettle Head
+    _slot: 0
+    _rarity: 2
+    _stats:
+      _attack: 7
+      _health: 42
+      _speed: 7
+      _defense: 8
+    _iconAddress: head_kettle.icon
+    _fullAddress: head_kettle.full
+  - _id: head_kettle_t3
+    _displayName: Rare Kettle Head
+    _slot: 0
+    _rarity: 3
+    _stats:
+      _attack: 9
+      _health: 56
+      _speed: 9
+      _defense: 11
+    _iconAddress: head_kettle.icon
+    _fullAddress: head_kettle.full
+  - _id: head_kettle_t4
+    _displayName: Epic Kettle Head
+    _slot: 0
+    _rarity: 4
+    _stats:
+      _attack: 12
+      _health: 74
+      _speed: 12
+      _defense: 14
+    _iconAddress: head_kettle.icon
+    _fullAddress: head_kettle.full
+  - _id: head_kettle_t5
+    _displayName: Legendary Kettle Head
+    _slot: 0
+    _rarity: 5
+    _stats:
+      _attack: 16
+      _health: 99
+      _speed: 16
+      _defense: 19
+    _iconAddress: head_kettle.icon
+    _fullAddress: head_kettle.full
+  - _id: head_paintcan_t1
+    _displayName: Common Paint Can Head
+    _slot: 0
+    _rarity: 1
+    _stats:
+      _attack: 6
+      _health: 34
+      _speed: 4
+      _defense: 4
+    _iconAddress: head_paintcan.icon
+    _fullAddress: head_paintcan.full
+  - _id: head_paintcan_t2
+    _displayName: Uncommon Paint Can Head
+    _slot: 0
+    _rarity: 2
+    _stats:
+      _attack: 8
+      _health: 46
+      _speed: 5
+      _defense: 5
+    _iconAddress: head_paintcan.icon
+    _fullAddress: head_paintcan.full
+  - _id: head_paintcan_t3
+    _displayName: Rare Paint Can Head
+    _slot: 0
+    _rarity: 3
+    _stats:
+      _attack: 11
+      _health: 61
+      _speed: 7
+      _defense: 7
+    _iconAddress: head_paintcan.icon
+    _fullAddress: head_paintcan.full
+  - _id: head_paintcan_t4
+    _displayName: Epic Paint Can Head
+    _slot: 0
+    _rarity: 4
+    _stats:
+      _attack: 14
+      _health: 82
+      _speed: 10
+      _defense: 10
+    _iconAddress: head_paintcan.icon
+    _fullAddress: head_paintcan.full
+  - _id: head_paintcan_t5
+    _displayName: Legendary Paint Can Head
+    _slot: 0
+    _rarity: 5
+    _stats:
+      _attack: 19
+      _health: 109
+      _speed: 13
+      _defense: 13
+    _iconAddress: head_paintcan.icon
+    _fullAddress: head_paintcan.full
+  - _id: head_teddy_t1
+    _displayName: Common Teddy Head
+    _slot: 0
+    _rarity: 1
+    _stats:
+      _attack: 7
+      _health: 37
+      _speed: 3
+      _defense: 5
+    _iconAddress: head_teddy.icon
+    _fullAddress: head_teddy.full
+  - _id: head_teddy_t2
+    _displayName: Uncommon Teddy Head
+    _slot: 0
+    _rarity: 2
+    _stats:
+      _attack: 9
+      _health: 50
+      _speed: 4
+      _defense: 7
+    _iconAddress: head_teddy.icon
+    _fullAddress: head_teddy.full
+  - _id: head_teddy_t3
+    _displayName: Rare Teddy Head
+    _slot: 0
+    _rarity: 3
+    _stats:
+      _attack: 13
+      _health: 67
+      _speed: 5
+      _defense: 9
+    _iconAddress: head_teddy.icon
+    _fullAddress: head_teddy.full
+  - _id: head_teddy_t4
+    _displayName: Epic Teddy Head
+    _slot: 0
+    _rarity: 4
+    _stats:
+      _attack: 17
+      _health: 89
+      _speed: 7
+      _defense: 12
+    _iconAddress: head_teddy.icon
+    _fullAddress: head_teddy.full
+  - _id: head_teddy_t5
+    _displayName: Legendary Teddy Head
+    _slot: 0
+    _rarity: 5
+    _stats:
+      _attack: 22
+      _health: 118
+      _speed: 10
+      _defense: 16
+    _iconAddress: head_teddy.icon
+    _fullAddress: head_teddy.full
+  - _id: head_trafficlight_t1
+    _displayName: Common Traffic Light Head
+    _slot: 0
+    _rarity: 1
+    _stats:
+      _attack: 8
+      _health: 40
+      _speed: 2
+      _defense: 6
+    _iconAddress: head_trafficlight.icon
+    _fullAddress: head_trafficlight.full
+  - _id: head_trafficlight_t2
+    _displayName: Uncommon Traffic Light Head
+    _slot: 0
+    _rarity: 2
+    _stats:
+      _attack: 11
+      _health: 54
+      _speed: 3
+      _defense: 8
+    _iconAddress: head_trafficlight.icon
+    _fullAddress: head_trafficlight.full
+  - _id: head_trafficlight_t3
+    _displayName: Rare Traffic Light Head
+    _slot: 0
+    _rarity: 3
+    _stats:
+      _attack: 14
+      _health: 72
+      _speed: 4
+      _defense: 11
+    _iconAddress: head_trafficlight.icon
+    _fullAddress: head_trafficlight.full
+  - _id: head_trafficlight_t4
+    _displayName: Epic Traffic Light Head
+    _slot: 0
+    _rarity: 4
+    _stats:
+      _attack: 19
+      _health: 96
+      _speed: 5
+      _defense: 14
+    _iconAddress: head_trafficlight.icon
+    _fullAddress: head_trafficlight.full
+  - _id: head_trafficlight_t5
+    _displayName: Legendary Traffic Light Head
+    _slot: 0
+    _rarity: 5
+    _stats:
+      _attack: 26
+      _health: 128
+      _speed: 6
+      _defense: 19
+    _iconAddress: head_trafficlight.icon
+    _fullAddress: head_trafficlight.full
+  - _id: torso_arcade_t1
+    _displayName: Common Arcade Torso
+    _slot: 1
+    _rarity: 1
+    _stats:
+      _attack: 1
+      _health: 60
+      _speed: 6
+      _defense: 8
+    _iconAddress: torso_arcade.icon
+    _fullAddress: torso_arcade.full
+  - _id: torso_arcade_t2
+    _displayName: Uncommon Arcade Torso
+    _slot: 1
+    _rarity: 2
+    _stats:
+      _attack: 1
+      _health: 81
+      _speed: 8
+      _defense: 11
+    _iconAddress: torso_arcade.icon
+    _fullAddress: torso_arcade.full
+  - _id: torso_arcade_t3
+    _displayName: Rare Arcade Torso
+    _slot: 1
+    _rarity: 3
+    _stats:
+      _attack: 2
+      _health: 108
+      _speed: 11
+      _defense: 14
+    _iconAddress: torso_arcade.icon
+    _fullAddress: torso_arcade.full
+  - _id: torso_arcade_t4
+    _displayName: Epic Arcade Torso
+    _slot: 1
+    _rarity: 4
+    _stats:
+      _attack: 2
+      _health: 144
+      _speed: 14
+      _defense: 19
+    _iconAddress: torso_arcade.icon
+    _fullAddress: torso_arcade.full
+  - _id: torso_arcade_t5
+    _displayName: Legendary Arcade Torso
+    _slot: 1
+    _rarity: 5
+    _stats:
+      _attack: 3
+      _health: 192
+      _speed: 19
+      _defense: 26
+    _iconAddress: torso_arcade.icon
+    _fullAddress: torso_arcade.full
+  - _id: torso_cooler_t1
+    _displayName: Common Cooler Torso
+    _slot: 1
+    _rarity: 1
+    _stats:
+      _attack: 2
+      _health: 63
+      _speed: 5
+      _defense: 9
+    _iconAddress: torso_cooler.icon
+    _fullAddress: torso_cooler.full
+  - _id: torso_cooler_t2
+    _displayName: Uncommon Cooler Torso
+    _slot: 1
+    _rarity: 2
+    _stats:
+      _attack: 3
+      _health: 85
+      _speed: 7
+      _defense: 12
+    _iconAddress: torso_cooler.icon
+    _fullAddress: torso_cooler.full
+  - _id: torso_cooler_t3
+    _displayName: Rare Cooler Torso
+    _slot: 1
+    _rarity: 3
+    _stats:
+      _attack: 4
+      _health: 113
+      _speed: 9
+      _defense: 16
+    _iconAddress: torso_cooler.icon
+    _fullAddress: torso_cooler.full
+  - _id: torso_cooler_t4
+    _displayName: Epic Cooler Torso
+    _slot: 1
+    _rarity: 4
+    _stats:
+      _attack: 5
+      _health: 151
+      _speed: 12
+      _defense: 22
+    _iconAddress: torso_cooler.icon
+    _fullAddress: torso_cooler.full
+  - _id: torso_cooler_t5
+    _displayName: Legendary Cooler Torso
+    _slot: 1
+    _rarity: 5
+    _stats:
+      _attack: 6
+      _health: 202
+      _speed: 16
+      _defense: 29
+    _iconAddress: torso_cooler.icon
+    _fullAddress: torso_cooler.full
+  - _id: torso_cylinder_t1
+    _displayName: Common Cylinder Torso
+    _slot: 1
+    _rarity: 1
+    _stats:
+      _attack: 3
+      _health: 66
+      _speed: 4
+      _defense: 10
+    _iconAddress: torso_cylinder.icon
+    _fullAddress: torso_cylinder.full
+  - _id: torso_cylinder_t2
+    _displayName: Uncommon Cylinder Torso
+    _slot: 1
+    _rarity: 2
+    _stats:
+      _attack: 4
+      _health: 89
+      _speed: 5
+      _defense: 14
+    _iconAddress: torso_cylinder.icon
+    _fullAddress: torso_cylinder.full
+  - _id: torso_cylinder_t3
+    _displayName: Rare Cylinder Torso
+    _slot: 1
+    _rarity: 3
+    _stats:
+      _attack: 5
+      _health: 119
+      _speed: 7
+      _defense: 18
+    _iconAddress: torso_cylinder.icon
+    _fullAddress: torso_cylinder.full
+  - _id: torso_cylinder_t4
+    _displayName: Epic Cylinder Torso
+    _slot: 1
+    _rarity: 4
+    _stats:
+      _attack: 7
+      _health: 158
+      _speed: 10
+      _defense: 24
+    _iconAddress: torso_cylinder.icon
+    _fullAddress: torso_cylinder.full
+  - _id: torso_cylinder_t5
+    _displayName: Legendary Cylinder Torso
+    _slot: 1
+    _rarity: 5
+    _stats:
+      _attack: 10
+      _health: 211
+      _speed: 13
+      _defense: 32
+    _iconAddress: torso_cylinder.icon
+    _fullAddress: torso_cylinder.full
+  - _id: torso_drum_t1
+    _displayName: Common Drum Torso
+    _slot: 1
+    _rarity: 1
+    _stats:
+      _attack: 4
+      _health: 69
+      _speed: 3
+      _defense: 8
+    _iconAddress: torso_drum.icon
+    _fullAddress: torso_drum.full
+  - _id: torso_drum_t2
+    _displayName: Uncommon Drum Torso
+    _slot: 1
+    _rarity: 2
+    _stats:
+      _attack: 5
+      _health: 93
+      _speed: 4
+      _defense: 11
+    _iconAddress: torso_drum.icon
+    _fullAddress: torso_drum.full
+  - _id: torso_drum_t3
+    _displayName: Rare Drum Torso
+    _slot: 1
+    _rarity: 3
+    _stats:
+      _attack: 7
+      _health: 124
+      _speed: 5
+      _defense: 14
+    _iconAddress: torso_drum.icon
+    _fullAddress: torso_drum.full
+  - _id: torso_drum_t4
+    _displayName: Epic Drum Torso
+    _slot: 1
+    _rarity: 4
+    _stats:
+      _attack: 10
+      _health: 166
+      _speed: 7
+      _defense: 19
+    _iconAddress: torso_drum.icon
+    _fullAddress: torso_drum.full
+  - _id: torso_drum_t5
+    _displayName: Legendary Drum Torso
+    _slot: 1
+    _rarity: 5
+    _stats:
+      _attack: 13
+      _health: 221
+      _speed: 10
+      _defense: 26
+    _iconAddress: torso_drum.icon
+    _fullAddress: torso_drum.full
+  - _id: torso_microwave_t1
+    _displayName: Common Microwave Torso
+    _slot: 1
+    _rarity: 1
+    _stats:
+      _attack: 5
+      _health: 72
+      _speed: 2
+      _defense: 9
+    _iconAddress: torso_microwave.icon
+    _fullAddress: torso_microwave.full
+  - _id: torso_microwave_t2
+    _displayName: Uncommon Microwave Torso
+    _slot: 1
+    _rarity: 2
+    _stats:
+      _attack: 7
+      _health: 97
+      _speed: 3
+      _defense: 12
+    _iconAddress: torso_microwave.icon
+    _fullAddress: torso_microwave.full
+  - _id: torso_microwave_t3
+    _displayName: Rare Microwave Torso
+    _slot: 1
+    _rarity: 3
+    _stats:
+      _attack: 9
+      _health: 130
+      _speed: 4
+      _defense: 16
+    _iconAddress: torso_microwave.icon
+    _fullAddress: torso_microwave.full
+  - _id: torso_microwave_t4
+    _displayName: Epic Microwave Torso
+    _slot: 1
+    _rarity: 4
+    _stats:
+      _attack: 12
+      _health: 173
+      _speed: 5
+      _defense: 22
+    _iconAddress: torso_microwave.icon
+    _fullAddress: torso_microwave.full
+  - _id: torso_microwave_t5
+    _displayName: Legendary Microwave Torso
+    _slot: 1
+    _rarity: 5
+    _stats:
+      _attack: 16
+      _health: 230
+      _speed: 6
+      _defense: 29
+    _iconAddress: torso_microwave.icon
+    _fullAddress: torso_microwave.full
+  - _id: torso_vending_t1
+    _displayName: Common Vending Torso
+    _slot: 1
+    _rarity: 1
+    _stats:
+      _attack: 6
+      _health: 75
+      _speed: 1
+      _defense: 10
+    _iconAddress: torso_vending.icon
+    _fullAddress: torso_vending.full
+  - _id: torso_vending_t2
+    _displayName: Uncommon Vending Torso
+    _slot: 1
+    _rarity: 2
+    _stats:
+      _attack: 8
+      _health: 101
+      _speed: 1
+      _defense: 14
+    _iconAddress: torso_vending.icon
+    _fullAddress: torso_vending.full
+  - _id: torso_vending_t3
+    _displayName: Rare Vending Torso
+    _slot: 1
+    _rarity: 3
+    _stats:
+      _attack: 11
+      _health: 135
+      _speed: 2
+      _defense: 18
+    _iconAddress: torso_vending.icon
+    _fullAddress: torso_vending.full
+  - _id: torso_vending_t4
+    _displayName: Epic Vending Torso
+    _slot: 1
+    _rarity: 4
+    _stats:
+      _attack: 14
+      _health: 180
+      _speed: 2
+      _defense: 24
+    _iconAddress: torso_vending.icon
+    _fullAddress: torso_vending.full
+  - _id: torso_vending_t5
+    _displayName: Legendary Vending Torso
+    _slot: 1
+    _rarity: 5
+    _stats:
+      _attack: 19
+      _health: 240
+      _speed: 3
+      _defense: 32
+    _iconAddress: torso_vending.icon
+    _fullAddress: torso_vending.full
+  - _id: arms_claw_t1
+    _displayName: Common Claw Arms
+    _slot: 2
+    _rarity: 1
+    _stats:
+      _attack: 8
+      _health: 15
+      _speed: 8
+      _defense: 3
+    _iconAddress: arms_claw.icon
+    _fullAddress: arms_claw.full
+  - _id: arms_claw_t2
+    _displayName: Uncommon Claw Arms
+    _slot: 2
+    _rarity: 2
+    _stats:
+      _attack: 11
+      _health: 20
+      _speed: 11
+      _defense: 4
+    _iconAddress: arms_claw.icon
+    _fullAddress: arms_claw.full
+  - _id: arms_claw_t3
+    _displayName: Rare Claw Arms
+    _slot: 2
+    _rarity: 3
+    _stats:
+      _attack: 14
+      _health: 27
+      _speed: 14
+      _defense: 5
+    _iconAddress: arms_claw.icon
+    _fullAddress: arms_claw.full
+  - _id: arms_claw_t4
+    _displayName: Epic Claw Arms
+    _slot: 2
+    _rarity: 4
+    _stats:
+      _attack: 19
+      _health: 36
+      _speed: 19
+      _defense: 7
+    _iconAddress: arms_claw.icon
+    _fullAddress: arms_claw.full
+  - _id: arms_claw_t5
+    _displayName: Legendary Claw Arms
+    _slot: 2
+    _rarity: 5
+    _stats:
+      _attack: 26
+      _health: 48
+      _speed: 26
+      _defense: 10
+    _iconAddress: arms_claw.icon
+    _fullAddress: arms_claw.full
+  - _id: arms_drill_t1
+    _displayName: Common Drill Arms
+    _slot: 2
+    _rarity: 1
+    _stats:
+      _attack: 9
+      _health: 18
+      _speed: 7
+      _defense: 4
+    _iconAddress: arms_drill.icon
+    _fullAddress: arms_drill.full
+  - _id: arms_drill_t2
+    _displayName: Uncommon Drill Arms
+    _slot: 2
+    _rarity: 2
+    _stats:
+      _attack: 12
+      _health: 24
+      _speed: 9
+      _defense: 5
+    _iconAddress: arms_drill.icon
+    _fullAddress: arms_drill.full
+  - _id: arms_drill_t3
+    _displayName: Rare Drill Arms
+    _slot: 2
+    _rarity: 3
+    _stats:
+      _attack: 16
+      _health: 32
+      _speed: 13
+      _defense: 7
+    _iconAddress: arms_drill.icon
+    _fullAddress: arms_drill.full
+  - _id: arms_drill_t4
+    _displayName: Epic Drill Arms
+    _slot: 2
+    _rarity: 4
+    _stats:
+      _attack: 22
+      _health: 43
+      _speed: 17
+      _defense: 10
+    _iconAddress: arms_drill.icon
+    _fullAddress: arms_drill.full
+  - _id: arms_drill_t5
+    _displayName: Legendary Drill Arms
+    _slot: 2
+    _rarity: 5
+    _stats:
+      _attack: 29
+      _health: 58
+      _speed: 22
+      _defense: 13
+    _iconAddress: arms_drill.icon
+    _fullAddress: arms_drill.full
+  - _id: arms_piston_t1
+    _displayName: Common Piston Arms
+    _slot: 2
+    _rarity: 1
+    _stats:
+      _attack: 10
+      _health: 21
+      _speed: 6
+      _defense: 5
+    _iconAddress: arms_piston.icon
+    _fullAddress: arms_piston.full
+  - _id: arms_piston_t2
+    _displayName: Uncommon Piston Arms
+    _slot: 2
+    _rarity: 2
+    _stats:
+      _attack: 14
+      _health: 28
+      _speed: 8
+      _defense: 7
+    _iconAddress: arms_piston.icon
+    _fullAddress: arms_piston.full
+  - _id: arms_piston_t3
+    _displayName: Rare Piston Arms
+    _slot: 2
+    _rarity: 3
+    _stats:
+      _attack: 18
+      _health: 38
+      _speed: 11
+      _defense: 9
+    _iconAddress: arms_piston.icon
+    _fullAddress: arms_piston.full
+  - _id: arms_piston_t4
+    _displayName: Epic Piston Arms
+    _slot: 2
+    _rarity: 4
+    _stats:
+      _attack: 24
+      _health: 50
+      _speed: 14
+      _defense: 12
+    _iconAddress: arms_piston.icon
+    _fullAddress: arms_piston.full
+  - _id: arms_piston_t5
+    _displayName: Legendary Piston Arms
+    _slot: 2
+    _rarity: 5
+    _stats:
+      _attack: 32
+      _health: 67
+      _speed: 19
+      _defense: 16
+    _iconAddress: arms_piston.icon
+    _fullAddress: arms_piston.full
+  - _id: arms_plate_t1
+    _displayName: Common Plate Arms
+    _slot: 2
+    _rarity: 1
+    _stats:
+      _attack: 11
+      _health: 24
+      _speed: 5
+      _defense: 3
+    _iconAddress: arms_plate.icon
+    _fullAddress: arms_plate.full
+  - _id: arms_plate_t2
+    _displayName: Uncommon Plate Arms
+    _slot: 2
+    _rarity: 2
+    _stats:
+      _attack: 15
+      _health: 32
+      _speed: 7
+      _defense: 4
+    _iconAddress: arms_plate.icon
+    _fullAddress: arms_plate.full
+  - _id: arms_plate_t3
+    _displayName: Rare Plate Arms
+    _slot: 2
+    _rarity: 3
+    _stats:
+      _attack: 20
+      _health: 43
+      _speed: 9
+      _defense: 5
+    _iconAddress: arms_plate.icon
+    _fullAddress: arms_plate.full
+  - _id: arms_plate_t4
+    _displayName: Epic Plate Arms
+    _slot: 2
+    _rarity: 4
+    _stats:
+      _attack: 26
+      _health: 58
+      _speed: 12
+      _defense: 7
+    _iconAddress: arms_plate.icon
+    _fullAddress: arms_plate.full
+  - _id: arms_plate_t5
+    _displayName: Legendary Plate Arms
+    _slot: 2
+    _rarity: 5
+    _stats:
+      _attack: 35
+      _health: 77
+      _speed: 16
+      _defense: 10
+    _iconAddress: arms_plate.icon
+    _fullAddress: arms_plate.full
+  - _id: arms_teddy_t1
+    _displayName: Common Teddy Arms
+    _slot: 2
+    _rarity: 1
+    _stats:
+      _attack: 12
+      _health: 27
+      _speed: 4
+      _defense: 4
+    _iconAddress: arms_teddy.icon
+    _fullAddress: arms_teddy.full
+  - _id: arms_teddy_t2
+    _displayName: Uncommon Teddy Arms
+    _slot: 2
+    _rarity: 2
+    _stats:
+      _attack: 16
+      _health: 36
+      _speed: 5
+      _defense: 5
+    _iconAddress: arms_teddy.icon
+    _fullAddress: arms_teddy.full
+  - _id: arms_teddy_t3
+    _displayName: Rare Teddy Arms
+    _slot: 2
+    _rarity: 3
+    _stats:
+      _attack: 22
+      _health: 49
+      _speed: 7
+      _defense: 7
+    _iconAddress: arms_teddy.icon
+    _fullAddress: arms_teddy.full
+  - _id: arms_teddy_t4
+    _displayName: Epic Teddy Arms
+    _slot: 2
+    _rarity: 4
+    _stats:
+      _attack: 29
+      _health: 65
+      _speed: 10
+      _defense: 10
+    _iconAddress: arms_teddy.icon
+    _fullAddress: arms_teddy.full
+  - _id: arms_teddy_t5
+    _displayName: Legendary Teddy Arms
+    _slot: 2
+    _rarity: 5
+    _stats:
+      _attack: 38
+      _health: 86
+      _speed: 13
+      _defense: 13
+    _iconAddress: arms_teddy.icon
+    _fullAddress: arms_teddy.full
+  - _id: arms_wrench_t1
+    _displayName: Common Wrench Arms
+    _slot: 2
+    _rarity: 1
+    _stats:
+      _attack: 13
+      _health: 30
+      _speed: 3
+      _defense: 5
+    _iconAddress: arms_wrench.icon
+    _fullAddress: arms_wrench.full
+  - _id: arms_wrench_t2
+    _displayName: Uncommon Wrench Arms
+    _slot: 2
+    _rarity: 2
+    _stats:
+      _attack: 18
+      _health: 40
+      _speed: 4
+      _defense: 7
+    _iconAddress: arms_wrench.icon
+    _fullAddress: arms_wrench.full
+  - _id: arms_wrench_t3
+    _displayName: Rare Wrench Arms
+    _slot: 2
+    _rarity: 3
+    _stats:
+      _attack: 23
+      _health: 54
+      _speed: 5
+      _defense: 9
+    _iconAddress: arms_wrench.icon
+    _fullAddress: arms_wrench.full
+  - _id: arms_wrench_t4
+    _displayName: Epic Wrench Arms
+    _slot: 2
+    _rarity: 4
+    _stats:
+      _attack: 31
+      _health: 72
+      _speed: 7
+      _defense: 12
+    _iconAddress: arms_wrench.icon
+    _fullAddress: arms_wrench.full
+  - _id: arms_wrench_t5
+    _displayName: Legendary Wrench Arms
+    _slot: 2
+    _rarity: 5
+    _stats:
+      _attack: 42
+      _health: 96
+      _speed: 10
+      _defense: 16
+    _iconAddress: arms_wrench.icon
+    _fullAddress: arms_wrench.full
+  - _id: legs_bird_t1
+    _displayName: Common Bird Legs
+    _slot: 3
+    _rarity: 1
+    _stats:
+      _attack: 1
+      _health: 20
+      _speed: 14
+      _defense: 3
+    _iconAddress: legs_bird.icon
+    _fullAddress: legs_bird.full
+  - _id: legs_bird_t2
+    _displayName: Uncommon Bird Legs
+    _slot: 3
+    _rarity: 2
+    _stats:
+      _attack: 1
+      _health: 27
+      _speed: 19
+      _defense: 4
+    _iconAddress: legs_bird.icon
+    _fullAddress: legs_bird.full
+  - _id: legs_bird_t3
+    _displayName: Rare Bird Legs
+    _slot: 3
+    _rarity: 3
+    _stats:
+      _attack: 2
+      _health: 36
+      _speed: 25
+      _defense: 5
+    _iconAddress: legs_bird.icon
+    _fullAddress: legs_bird.full
+  - _id: legs_bird_t4
+    _displayName: Epic Bird Legs
+    _slot: 3
+    _rarity: 4
+    _stats:
+      _attack: 2
+      _health: 48
+      _speed: 34
+      _defense: 7
+    _iconAddress: legs_bird.icon
+    _fullAddress: legs_bird.full
+  - _id: legs_bird_t5
+    _displayName: Legendary Bird Legs
+    _slot: 3
+    _rarity: 5
+    _stats:
+      _attack: 3
+      _health: 64
+      _speed: 45
+      _defense: 10
+    _iconAddress: legs_bird.icon
+    _fullAddress: legs_bird.full
+  - _id: legs_boots_t1
+    _displayName: Common Boots Legs
+    _slot: 3
+    _rarity: 1
+    _stats:
+      _attack: 2
+      _health: 23
+      _speed: 13
+      _defense: 4
+    _iconAddress: legs_boots.icon
+    _fullAddress: legs_boots.full
+  - _id: legs_boots_t2
+    _displayName: Uncommon Boots Legs
+    _slot: 3
+    _rarity: 2
+    _stats:
+      _attack: 3
+      _health: 31
+      _speed: 18
+      _defense: 5
+    _iconAddress: legs_boots.icon
+    _fullAddress: legs_boots.full
+  - _id: legs_boots_t3
+    _displayName: Rare Boots Legs
+    _slot: 3
+    _rarity: 3
+    _stats:
+      _attack: 4
+      _health: 41
+      _speed: 23
+      _defense: 7
+    _iconAddress: legs_boots.icon
+    _fullAddress: legs_boots.full
+  - _id: legs_boots_t4
+    _displayName: Epic Boots Legs
+    _slot: 3
+    _rarity: 4
+    _stats:
+      _attack: 5
+      _health: 55
+      _speed: 31
+      _defense: 10
+    _iconAddress: legs_boots.icon
+    _fullAddress: legs_boots.full
+  - _id: legs_boots_t5
+    _displayName: Legendary Boots Legs
+    _slot: 3
+    _rarity: 5
+    _stats:
+      _attack: 6
+      _health: 74
+      _speed: 42
+      _defense: 13
+    _iconAddress: legs_boots.icon
+    _fullAddress: legs_boots.full
+  - _id: legs_pipe_t1
+    _displayName: Common Pipe Legs
+    _slot: 3
+    _rarity: 1
+    _stats:
+      _attack: 3
+      _health: 26
+      _speed: 12
+      _defense: 5
+    _iconAddress: legs_pipe.icon
+    _fullAddress: legs_pipe.full
+  - _id: legs_pipe_t2
+    _displayName: Uncommon Pipe Legs
+    _slot: 3
+    _rarity: 2
+    _stats:
+      _attack: 4
+      _health: 35
+      _speed: 16
+      _defense: 7
+    _iconAddress: legs_pipe.icon
+    _fullAddress: legs_pipe.full
+  - _id: legs_pipe_t3
+    _displayName: Rare Pipe Legs
+    _slot: 3
+    _rarity: 3
+    _stats:
+      _attack: 5
+      _health: 47
+      _speed: 22
+      _defense: 9
+    _iconAddress: legs_pipe.icon
+    _fullAddress: legs_pipe.full
+  - _id: legs_pipe_t4
+    _displayName: Epic Pipe Legs
+    _slot: 3
+    _rarity: 4
+    _stats:
+      _attack: 7
+      _health: 62
+      _speed: 29
+      _defense: 12
+    _iconAddress: legs_pipe.icon
+    _fullAddress: legs_pipe.full
+  - _id: legs_pipe_t5
+    _displayName: Legendary Pipe Legs
+    _slot: 3
+    _rarity: 5
+    _stats:
+      _attack: 10
+      _health: 83
+      _speed: 38
+      _defense: 16
+    _iconAddress: legs_pipe.icon
+    _fullAddress: legs_pipe.full
+  - _id: legs_spring_t1
+    _displayName: Common Spring Legs
+    _slot: 3
+    _rarity: 1
+    _stats:
+      _attack: 4
+      _health: 29
+      _speed: 11
+      _defense: 3
+    _iconAddress: legs_spring.icon
+    _fullAddress: legs_spring.full
+  - _id: legs_spring_t2
+    _displayName: Uncommon Spring Legs
+    _slot: 3
+    _rarity: 2
+    _stats:
+      _attack: 5
+      _health: 39
+      _speed: 15
+      _defense: 4
+    _iconAddress: legs_spring.icon
+    _fullAddress: legs_spring.full
+  - _id: legs_spring_t3
+    _displayName: Rare Spring Legs
+    _slot: 3
+    _rarity: 3
+    _stats:
+      _attack: 7
+      _health: 52
+      _speed: 20
+      _defense: 5
+    _iconAddress: legs_spring.icon
+    _fullAddress: legs_spring.full
+  - _id: legs_spring_t4
+    _displayName: Epic Spring Legs
+    _slot: 3
+    _rarity: 4
+    _stats:
+      _attack: 10
+      _health: 70
+      _speed: 26
+      _defense: 7
+    _iconAddress: legs_spring.icon
+    _fullAddress: legs_spring.full
+  - _id: legs_spring_t5
+    _displayName: Legendary Spring Legs
+    _slot: 3
+    _rarity: 5
+    _stats:
+      _attack: 13
+      _health: 93
+      _speed: 35
+      _defense: 10
+    _iconAddress: legs_spring.icon
+    _fullAddress: legs_spring.full
+  - _id: legs_tracks_t1
+    _displayName: Common Tracks Legs
+    _slot: 3
+    _rarity: 1
+    _stats:
+      _attack: 5
+      _health: 32
+      _speed: 10
+      _defense: 4
+    _iconAddress: legs_tracks.icon
+    _fullAddress: legs_tracks.full
+  - _id: legs_tracks_t2
+    _displayName: Uncommon Tracks Legs
+    _slot: 3
+    _rarity: 2
+    _stats:
+      _attack: 7
+      _health: 43
+      _speed: 14
+      _defense: 5
+    _iconAddress: legs_tracks.icon
+    _fullAddress: legs_tracks.full
+  - _id: legs_tracks_t3
+    _displayName: Rare Tracks Legs
+    _slot: 3
+    _rarity: 3
+    _stats:
+      _attack: 9
+      _health: 58
+      _speed: 18
+      _defense: 7
+    _iconAddress: legs_tracks.icon
+    _fullAddress: legs_tracks.full
+  - _id: legs_tracks_t4
+    _displayName: Epic Tracks Legs
+    _slot: 3
+    _rarity: 4
+    _stats:
+      _attack: 12
+      _health: 77
+      _speed: 24
+      _defense: 10
+    _iconAddress: legs_tracks.icon
+    _fullAddress: legs_tracks.full
+  - _id: legs_tracks_t5
+    _displayName: Legendary Tracks Legs
+    _slot: 3
+    _rarity: 5
+    _stats:
+      _attack: 16
+      _health: 102
+      _speed: 32
+      _defense: 13
+    _iconAddress: legs_tracks.icon
+    _fullAddress: legs_tracks.full
+  - _id: legs_trolley_t1
+    _displayName: Common Trolley Legs
+    _slot: 3
+    _rarity: 1
+    _stats:
+      _attack: 6
+      _health: 35
+      _speed: 9
+      _defense: 5
+    _iconAddress: legs_trolley.icon
+    _fullAddress: legs_trolley.full
+  - _id: legs_trolley_t2
+    _displayName: Uncommon Trolley Legs
+    _slot: 3
+    _rarity: 2
+    _stats:
+      _attack: 8
+      _health: 47
+      _speed: 12
+      _defense: 7
+    _iconAddress: legs_trolley.icon
+    _fullAddress: legs_trolley.full
+  - _id: legs_trolley_t3
+    _displayName: Rare Trolley Legs
+    _slot: 3
+    _rarity: 3
+    _stats:
+      _attack: 11
+      _health: 63
+      _speed: 16
+      _defense: 9
+    _iconAddress: legs_trolley.icon
+    _fullAddress: legs_trolley.full
+  - _id: legs_trolley_t4
+    _displayName: Epic Trolley Legs
+    _slot: 3
+    _rarity: 4
+    _stats:
+      _attack: 14
+      _health: 84
+      _speed: 22
+      _defense: 12
+    _iconAddress: legs_trolley.icon
+    _fullAddress: legs_trolley.full
+  - _id: legs_trolley_t5
+    _displayName: Legendary Trolley Legs
+    _slot: 3
+    _rarity: 5
+    _stats:
+      _attack: 19
+      _health: 112
+      _speed: 29
+      _defense: 16
+    _iconAddress: legs_trolley.icon
+    _fullAddress: legs_trolley.full
+  - _id: weapon_bat_t1
+    _displayName: Common Bat Weapon
+    _slot: 4
+    _rarity: 1
+    _stats:
+      _attack: 14
+      _health: 0
+      _speed: 7
+      _defense: 1
+    _iconAddress: weapon_bat.icon
+    _fullAddress: weapon_bat.full
+  - _id: weapon_bat_t2
+    _displayName: Uncommon Bat Weapon
+    _slot: 4
+    _rarity: 2
+    _stats:
+      _attack: 19
+      _health: 0
+      _speed: 9
+      _defense: 1
+    _iconAddress: weapon_bat.icon
+    _fullAddress: weapon_bat.full
+  - _id: weapon_bat_t3
+    _displayName: Rare Bat Weapon
+    _slot: 4
+    _rarity: 3
+    _stats:
+      _attack: 25
+      _health: 0
+      _speed: 13
+      _defense: 2
+    _iconAddress: weapon_bat.icon
+    _fullAddress: weapon_bat.full
+  - _id: weapon_bat_t4
+    _displayName: Epic Bat Weapon
+    _slot: 4
+    _rarity: 4
+    _stats:
+      _attack: 34
+      _health: 0
+      _speed: 17
+      _defense: 2
+    _iconAddress: weapon_bat.icon
+    _fullAddress: weapon_bat.full
+  - _id: weapon_bat_t5
+    _displayName: Legendary Bat Weapon
+    _slot: 4
+    _rarity: 5
+    _stats:
+      _attack: 45
+      _health: 0
+      _speed: 22
+      _defense: 3
+    _iconAddress: weapon_bat.icon
+    _fullAddress: weapon_bat.full
+  - _id: weapon_blower_t1
+    _displayName: Common Blower Weapon
+    _slot: 4
+    _rarity: 1
+    _stats:
+      _attack: 15
+      _health: 3
+      _speed: 6
+      _defense: 2
+    _iconAddress: weapon_blower.icon
+    _fullAddress: weapon_blower.full
+  - _id: weapon_blower_t2
+    _displayName: Uncommon Blower Weapon
+    _slot: 4
+    _rarity: 2
+    _stats:
+      _attack: 20
+      _health: 4
+      _speed: 8
+      _defense: 3
+    _iconAddress: weapon_blower.icon
+    _fullAddress: weapon_blower.full
+  - _id: weapon_blower_t3
+    _displayName: Rare Blower Weapon
+    _slot: 4
+    _rarity: 3
+    _stats:
+      _attack: 27
+      _health: 5
+      _speed: 11
+      _defense: 4
+    _iconAddress: weapon_blower.icon
+    _fullAddress: weapon_blower.full
+  - _id: weapon_blower_t4
+    _displayName: Epic Blower Weapon
+    _slot: 4
+    _rarity: 4
+    _stats:
+      _attack: 36
+      _health: 7
+      _speed: 14
+      _defense: 5
+    _iconAddress: weapon_blower.icon
+    _fullAddress: weapon_blower.full
+  - _id: weapon_blower_t5
+    _displayName: Legendary Blower Weapon
+    _slot: 4
+    _rarity: 5
+    _stats:
+      _attack: 48
+      _health: 10
+      _speed: 19
+      _defense: 6
+    _iconAddress: weapon_blower.icon
+    _fullAddress: weapon_blower.full
+  - _id: weapon_chainsaw_t1
+    _displayName: Common Chainsaw Weapon
+    _slot: 4
+    _rarity: 1
+    _stats:
+      _attack: 16
+      _health: 6
+      _speed: 5
+      _defense: 3
+    _iconAddress: weapon_chainsaw.icon
+    _fullAddress: weapon_chainsaw.full
+  - _id: weapon_chainsaw_t2
+    _displayName: Uncommon Chainsaw Weapon
+    _slot: 4
+    _rarity: 2
+    _stats:
+      _attack: 22
+      _health: 8
+      _speed: 7
+      _defense: 4
+    _iconAddress: weapon_chainsaw.icon
+    _fullAddress: weapon_chainsaw.full
+  - _id: weapon_chainsaw_t3
+    _displayName: Rare Chainsaw Weapon
+    _slot: 4
+    _rarity: 3
+    _stats:
+      _attack: 29
+      _health: 11
+      _speed: 9
+      _defense: 5
+    _iconAddress: weapon_chainsaw.icon
+    _fullAddress: weapon_chainsaw.full
+  - _id: weapon_chainsaw_t4
+    _displayName: Epic Chainsaw Weapon
+    _slot: 4
+    _rarity: 4
+    _stats:
+      _attack: 38
+      _health: 14
+      _speed: 12
+      _defense: 7
+    _iconAddress: weapon_chainsaw.icon
+    _fullAddress: weapon_chainsaw.full
+  - _id: weapon_chainsaw_t5
+    _displayName: Legendary Chainsaw Weapon
+    _slot: 4
+    _rarity: 5
+    _stats:
+      _attack: 51
+      _health: 19
+      _speed: 16
+      _defense: 10
+    _iconAddress: weapon_chainsaw.icon
+    _fullAddress: weapon_chainsaw.full
+  - _id: weapon_extinguisher_t1
+    _displayName: Common Extinguisher Weapon
+    _slot: 4
+    _rarity: 1
+    _stats:
+      _attack: 17
+      _health: 9
+      _speed: 4
+      _defense: 1
+    _iconAddress: weapon_extinguisher.icon
+    _fullAddress: weapon_extinguisher.full
+  - _id: weapon_extinguisher_t2
+    _displayName: Uncommon Extinguisher Weapon
+    _slot: 4
+    _rarity: 2
+    _stats:
+      _attack: 23
+      _health: 12
+      _speed: 5
+      _defense: 1
+    _iconAddress: weapon_extinguisher.icon
+    _fullAddress: weapon_extinguisher.full
+  - _id: weapon_extinguisher_t3
+    _displayName: Rare Extinguisher Weapon
+    _slot: 4
+    _rarity: 3
+    _stats:
+      _attack: 31
+      _health: 16
+      _speed: 7
+      _defense: 2
+    _iconAddress: weapon_extinguisher.icon
+    _fullAddress: weapon_extinguisher.full
+  - _id: weapon_extinguisher_t4
+    _displayName: Epic Extinguisher Weapon
+    _slot: 4
+    _rarity: 4
+    _stats:
+      _attack: 41
+      _health: 22
+      _speed: 10
+      _defense: 2
+    _iconAddress: weapon_extinguisher.icon
+    _fullAddress: weapon_extinguisher.full
+  - _id: weapon_extinguisher_t5
+    _displayName: Legendary Extinguisher Weapon
+    _slot: 4
+    _rarity: 5
+    _stats:
+      _attack: 54
+      _health: 29
+      _speed: 13
+      _defense: 3
+    _iconAddress: weapon_extinguisher.icon
+    _fullAddress: weapon_extinguisher.full
+  - _id: weapon_harpoon_t1
+    _displayName: Common Harpoon Weapon
+    _slot: 4
+    _rarity: 1
+    _stats:
+      _attack: 18
+      _health: 12
+      _speed: 3
+      _defense: 2
+    _iconAddress: weapon_harpoon.icon
+    _fullAddress: weapon_harpoon.full
+  - _id: weapon_harpoon_t2
+    _displayName: Uncommon Harpoon Weapon
+    _slot: 4
+    _rarity: 2
+    _stats:
+      _attack: 24
+      _health: 16
+      _speed: 4
+      _defense: 3
+    _iconAddress: weapon_harpoon.icon
+    _fullAddress: weapon_harpoon.full
+  - _id: weapon_harpoon_t3
+    _displayName: Rare Harpoon Weapon
+    _slot: 4
+    _rarity: 3
+    _stats:
+      _attack: 32
+      _health: 22
+      _speed: 5
+      _defense: 4
+    _iconAddress: weapon_harpoon.icon
+    _fullAddress: weapon_harpoon.full
+  - _id: weapon_harpoon_t4
+    _displayName: Epic Harpoon Weapon
+    _slot: 4
+    _rarity: 4
+    _stats:
+      _attack: 43
+      _health: 29
+      _speed: 7
+      _defense: 5
+    _iconAddress: weapon_harpoon.icon
+    _fullAddress: weapon_harpoon.full
+  - _id: weapon_harpoon_t5
+    _displayName: Legendary Harpoon Weapon
+    _slot: 4
+    _rarity: 5
+    _stats:
+      _attack: 58
+      _health: 38
+      _speed: 10
+      _defense: 6
+    _iconAddress: weapon_harpoon.icon
+    _fullAddress: weapon_harpoon.full
+  - _id: weapon_sledge_t1
+    _displayName: Common Sledge Weapon
+    _slot: 4
+    _rarity: 1
+    _stats:
+      _attack: 19
+      _health: 15
+      _speed: 2
+      _defense: 3
+    _iconAddress: weapon_sledge.icon
+    _fullAddress: weapon_sledge.full
+  - _id: weapon_sledge_t2
+    _displayName: Uncommon Sledge Weapon
+    _slot: 4
+    _rarity: 2
+    _stats:
+      _attack: 26
+      _health: 20
+      _speed: 3
+      _defense: 4
+    _iconAddress: weapon_sledge.icon
+    _fullAddress: weapon_sledge.full
+  - _id: weapon_sledge_t3
+    _displayName: Rare Sledge Weapon
+    _slot: 4
+    _rarity: 3
+    _stats:
+      _attack: 34
+      _health: 27
+      _speed: 4
+      _defense: 5
+    _iconAddress: weapon_sledge.icon
+    _fullAddress: weapon_sledge.full
+  - _id: weapon_sledge_t4
+    _displayName: Epic Sledge Weapon
+    _slot: 4
+    _rarity: 4
+    _stats:
+      _attack: 46
+      _health: 36
+      _speed: 5
+      _defense: 7
+    _iconAddress: weapon_sledge.icon
+    _fullAddress: weapon_sledge.full
+  - _id: weapon_sledge_t5
+    _displayName: Legendary Sledge Weapon
+    _slot: 4
+    _rarity: 5
+    _stats:
+      _attack: 61
+      _health: 48
+      _speed: 6
+      _defense: 10
+    _iconAddress: weapon_sledge.icon
+    _fullAddress: weapon_sledge.full
