@@ -99,6 +99,8 @@ Deliberately small — a handful of focused classes, namespace `Junkinnering`, n
 
 ## Junkbot Workshop (extension)
 
+![The workshop screen](Docs/workshop-screen.jpg)
+
 Built after the graded task was accepted, to exercise what a content-heavy live game actually needs: a large
 part inventory whose art is streamed in a **bounded window**, recycling as a cancellation trigger, and
 concurrent operations that must supersede within a scope while staying independent across scopes.
@@ -142,8 +144,30 @@ Measured in the Editor on one slot's 30 entries (Play Mode Script = Use Asset Da
 
 A second dev button, **LIST ×1 / ×5**, multiplies the open list so the comparison can be seen at demo scale
 without a second build. At ×5 (150 entries in one picker) the toggle reads **150 cells / 155 live handles /
-~80 ms to open** against the pool's unchanged **15 / 14 / ~2 ms** — a ~35× difference in open cost, from the
-same data, through the same sprite source.
+~80 ms to open** against the pool's unchanged **15 / 14 / ~2 ms**, from the same data, through the same
+sprite source.
+
+Editor figures understate it, because Play Mode Script = Use Asset Database hands back assets that are
+already loaded. On a **Samsung Galaxy A15 (SM-A155F)**, at ×5:
+
+| | Cells instantiated | Live handles | Picker open cost |
+|---|---|---|---|
+| Windowed | 15 (the pool) | 14 | **61 ms** |
+| Naive | 150 (one per item) | 155 | **262 ms** |
+
+262 ms is roughly sixteen frames at 60 fps — a stall you feel rather than measure. `155 = 150 icon leases +
+the 5 equipped parts`. The windowed column is unchanged between ×1 and ×5, which is the whole claim: live
+handles are bounded by the pool, not by the length of the list.
+
+| Naive ×5 | Windowed ×5 |
+|---|---|
+| ![Naive](Docs/workshop-naive-x5.jpg) | ![Windowed](Docs/workshop-windowed-x5.jpg) |
+
+Both are first opens in the session, so the comparison is like-for-like: the windowed 61 ms includes building
+the 15-cell pool, which a second open reuses.
+
+`texture memory` reads the same in both modes, and that is not a bug — see the note below on what the toggle
+deliberately does not show.
 
 Switching back returns the counter to the pool bound rather than to something higher, which is the part worth
 checking: it proves the strawman path releases everything it took.
