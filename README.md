@@ -1,11 +1,11 @@
-# Junkinnering — Tap-the-Object Test Task
+# Tap-the-Object Addressables Demo
 
-A small Unity game built for the *Senior Unity Developer* test task. One 3D object sits on screen wearing an
+A small Unity game exploring async Addressables loading under rapid state changes. One 3D object sits on screen wearing an
 image loaded **asynchronously via Addressables**. Tap it → score goes up and a new image loads (the next
 round). Tap empty space → the object flashes red and keeps its image. If a new round starts before the
 previous image finished downloading, the stale download is cancelled so it can never overwrite the newer one.
 
-The repository also contains **Junkbot Workshop**, an extension built after the graded task: a modular robot
+The repository also contains **Junkbot Workshop**, an extension built afterward: a modular robot
 assembly screen driven by the same Addressables discipline at a much larger scale — see
 [Junkbot Workshop](#junkbot-workshop-extension) below. The workshop is the **startup scene**, and the two
 scenes reach each other: `TAP GAME` in the workshop, `WORKSHOP` in the tap game.
@@ -26,7 +26,7 @@ cover touch). It covers every raycastable UI element in the scene, not only the 
 ## Run it
 
 1. Open the project in Unity `6000.3.5f2`.
-2. Open `Assets/Scenes/TapGameScene.unity` (the graded task). `Assets/Scenes/WorkshopScene.unity` is the
+2. Open `Assets/Scenes/TapGameScene.unity` (the tap game). `Assets/Scenes/WorkshopScene.unity` is the
    startup scene of the extension and can be played the same way.
 3. **Addressables ▸ Groups ▸ Play Mode Script = "Use Asset Database (fastest)"** (default local mode — no
    content build needed).
@@ -101,7 +101,7 @@ Deliberately small — a handful of focused classes, namespace `Junkinnering`, n
 
 ![The workshop screen](Docs/workshop-screen.jpg)
 
-Built after the graded task was accepted, to exercise what a content-heavy live game actually needs: a large
+Built afterward, to exercise what a content-heavy live game actually needs: a large
 part inventory whose art is streamed in a **bounded window**, recycling as a cancellation trigger, and
 concurrent operations that must supersede within a scope while staying independent across scopes.
 
